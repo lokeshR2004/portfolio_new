@@ -29,13 +29,13 @@ body {
     list-style: none;
 }
 
-.container nav h1 {
+.container nav h2 {
     color: #FBE4D6;
     font-size: 60px;
     font-weight: 500;
 }
 
-.container nav h1 span {
+.container nav h2 span {
     color: #7cf03d;
 }
 
@@ -138,7 +138,7 @@ body {
 /* About */
 #about {
     padding: 80px 0;
-    color: ababab;
+    color: #ababab;
 }
 
 .row {
@@ -162,45 +162,30 @@ body {
 .column_2 {
     flex-basis: 55%;
     padding-right: 30px;
+    /* align-items: center; */
 }
+
 .column_2 p{
     margin-top: 20px;
     font-size: 1.2rem;
     font-weight: 300;
 }
+/* .column_2 p */
 .title{
     font-size: 60px;
     font-weight: 600;
     color: #fff;
+    margin-left: 39%;
+    padding: 20px;
+    /* display: inline-block; */
+    /* align-items: center; */
 
 }
-/* .btnsci{
-    margin-top: 20px;
-    color: #7cf03d;
-    
-}
-.btnsci .sci a{
-   
-    /* position: sticky; */
-    /* color: #7cf03d;
-    /* text-decoration: none; 
-    padding: 8px;
-    border: 2px solid #7cf03d;
-    border-radius: 50%;
-    font-size: 20px;
-    margin: 0 8px;
-    transition: .5s;
-} */
-/* .btnsci .sci a:hover{
-    background: #7cf03d;
-    color: #1f242d;
-    box-shadow: 0 0 10px #7cf03d; 
-   }   */ 
 .skill{
     /* text-decoration: none; */
     list-style-type: none;
     position: absolute;
-    top: 125%;
+    top: 135%;
     right: 60px;
     /* margin-bottom: 100px; */
     width: 700px;
@@ -520,25 +505,77 @@ form input, form textarea{
     position: absolute;
     right: 13%;
 }
+nav .fa{
+    display: none;
+}
 @media screen and (max-width: 600px) {
   /* Navigation Menu */
-  .header_nav h1{
-    margin-left: 5px;
-    margin-top:5px ;
-    font-size: 14px;
+  .header{
+    width: 100vh;
+    height: 100vw;
+    
   }
+
+  .header_nav h2{
+    margin-left:10px;
+    margin-top:20px ;
+    font-size: 120px;
+  } 
   .header_nav ul {
+    /* margin-left: 0px; */
+    border-radius: 5px;
+    /* border: 1px solid #71ff4a; */
+    /* background-color: #9ce774; */
     flex-direction: column;
     align-items: center;
-    gap: 25px;
-    padding: 10px 0;
-    color: #000000;
+    gap: 10PX;
+    padding: 10px;
+    display:inline-flex;
+    /* background-color: #000000; */
+  }
+  .header_nav > h1{
+    /* background-color: #000000; */
+    font-size: .5rem;
+    /* position: absolute; */
   }
 
   .header_nav ul li {
+    /* background-color: #00000 */
     display: block;
     margin: 10px 0;
+    border: 1PX solid #71ff4a;
+    padding: 10PX;
+    border-radius: 5PX;
   }
+  .header_text h1{
+    position: absolute;
+    left: 50px;
+    font-size: smaller;
+    margin-top: 50px;
+  }
+  .header_text p{
+    font-size: 0%;
+  }
+  .header_text a{
+  position: relative;
+  top: 100px;
+  left: -15%;
+  font-size: 0.9rem;
+
+  }
+  nav .fa{
+    display: block;
+    font-size: 25px;
+}
+nav ul{
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 200px;
+    height: fit-content;
+    padding-top: 60px;
+}
 
   /* Main Section (Hero) */
   .main {
@@ -548,65 +585,120 @@ form input, form textarea{
     padding-top: 80px;
   }
 
-  .main_image {
-    position: static;
-    /* color: #1f242d; */
-    background-color: transparent;
-    width: 100px;
-    height: 100px;
-    margin: 20px 0;
+  .main_image img {
+    margin-left: 150px;
+    filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    background-color: #1f242d;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0%;
   }
-
+.ab_container h2{
+    font-size: 3.5rem;
+    margin-left: 20px;
+}
   .main_text {
     max-width: 90%;
     padding: 0 20px;
   }
 
   /* Skills Section */
-  .skills {
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    width: 100px;
-    height: 100px;
+  .row{
+    display: block;
+  }
+  .column_1 img{
+    background-color: #d8f1cb;
+    width: 100%;
+    height: 75%;
+    height: auto;
+  }
+  .column_2 h1,p{
+    margin-left: 20px;
+    margin-bottom: 20px;
   }
 
   .skill {
+    margin-top: 100px;
+    margin-left: 40px;
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    gap: 20px;
+    flex-direction: column;
     width: 100%;
     height: auto;
     position: static;
   }
 
   /* Services Section */
-  .cards {
-    flex-direction: column;
+  .services{
+    margin-top: -20%;
+  }
+  .container > .Title{
+    align-items: center;
+    font-size: 34px;
+    margin-top: 4px;
+    margin-left: 20px;
+  }
+  .service_list {
+    display: block;
     align-items: center;
   }
-
-  .card {
-    width: 90%;
-    margin: 10px 0;
+  .service_list p{
+    margin-left: 0px;
+    text-wrap: wrap;
+    position: static;
   }
+
 
   /* Portfolio Section */
-  .project {
-    flex-direction: column;
+  .work_list {
+    /* flex-direction:; */
+    display: block;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
+    margin-top: 0%;
   }
-
-  .pro1 {
-    width: 90%;
+  .work_list .image{
+    width: auto;
+    height: auto;
+    margin-bottom: 30px;
   }
-
   /* Contact Section */
+  /* .container .row{
+    margin-top: -10%;
+    padding: 20px;
+    display: block; */
+    /* display: contents; */
+  /* }
+  .row .column1 p{
+    margin-left: -8px; */
+    /* position: ; */
+    /* position: static; */
+    /* padding: 20px; */
+    /* font-size: 34px; */
+  /* } */ 
+
+
   .form {
     width: 90%;
   }
 
   /* Footer */
-  footer {
-    padding: 10px;
+  .footer {
+    /* padding: 10px; */
     font-size: 14px;
+    width: 650px;
+  }
+  .footer li{
+    margin: 0%;
+    margin-right: .2px;
+    /* padding: 10px; */
+  }
+  .footer .nxt{
+    padding-bottom: 20px;
+    font-size: .7rem;
   }
 }
